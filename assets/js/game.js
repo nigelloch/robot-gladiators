@@ -14,11 +14,6 @@ console.log(enemyNames[1]);
 console.log(enemyNames[2]);
 console.log(enemyNames.length);
 
-for(var i = 0; i < enemyNames.length; i++) {
-    console.log(enemyNames[i]);
-    console.log(i);
-    console.log(enemyNames[i] + " is at " + i + " index");
-  
   
   var fight = function(enemyName) {
      // fight function statements
@@ -76,6 +71,6 @@ for(var i = 0; i < enemyNames.length; i++) {
    
 for(var i = 0; i < enemyNames.length; i++) {
     fight(enemyNames[i]);
-  }
-};
+  };
+
     
