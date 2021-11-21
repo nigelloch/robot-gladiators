@@ -79,9 +79,20 @@ var randomNumber = function(min, max) {
   };   
 
 
+  // function to set name
+var getPlayerName = function() {
+  var name = "";
+
+while (name === "" || name +++ null) {
+  name = prompt("What is your robot's name?");
+}
+  console.log("Your robot's name is " + name);
+  return name;
+};
+
 //playerobject
 var playerInfo = {
-    name: window.prompt("What is your robot's name?"),
+    name: getPlayerName(),
     health: 100,
     attack: 10,
     money: 10,
@@ -89,7 +100,8 @@ var playerInfo = {
       this.health = 100;
       this.money = 10;
       this.attack = 10;
-    }, // comma!
+    },
+
     refillHealth: function() {
         if (this.money >= 7) {
           window.alert("Refilling player's health by 20 for 7 dollars.");
@@ -99,8 +111,8 @@ var playerInfo = {
         else {
           window.alert("You don't have enough money!");
         }
-      },
-      upgradeAttack: function() {
+    },
+    upgradeAttack: function() {
         if (this.money >= 7) {
           window.alert("Upgrading player's attack by 6 for 7 dollars.");
           this.attack += 6;
@@ -108,10 +120,9 @@ var playerInfo = {
         } 
         else {
           window.alert("You don't have enough money!");
-        }
-      }
+        }  
     }
-  
+};
 
 //Enemyarray
 var enemyInfo = [
@@ -139,7 +150,7 @@ var startGame = function() {
         if (playerInfo.health > 0) {
         
             window.alert('Welcome to Robot Gladiators! Round ' + (i + 1));
-    
+                
             var pickedEnemyObj = enemyInfo[i];
     
             pickedEnemyObj.health = randomNumber(40, 60);
@@ -183,7 +194,7 @@ var startGame = function() {
             startGame();
         }
         else {
-            window.alert("Thank you for playing RObot Gladiators! Come back soon!");
+            window.alert("Thank you for playing Robot Gladiators! Come back soon!");
         }
     };
 
